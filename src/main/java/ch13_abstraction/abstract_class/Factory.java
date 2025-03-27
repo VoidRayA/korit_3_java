@@ -21,7 +21,6 @@ public abstract class Factory {
      */
     // 그렇다고 해서 일반 메서드를 못쓰는게 아니기 때문에
 
-
     public String getName() {
         return name;
     }
