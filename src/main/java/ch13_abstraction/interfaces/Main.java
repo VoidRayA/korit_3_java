@@ -12,21 +12,49 @@ package ch13_abstraction.interfaces;
  */
 public class Main {
     public static void main(String[] args) {
-        // Channel
-        TvRemoteController tvRemoteController = new TvRemoteController(
-                new PowerButton(), new ChannelDownButton(), new ChannelUpButton() ,new VolumeDownButton(), new VolumeUpButton());
+//        TvRemoteController tvRemoteController = new TvRemoteController(
+//                new PowerButton(), new ChannelDownButton(), new ChannelUpButton() ,new VolumeDownButton(), new VolumeUpButton());
+//
+//        tvRemoteController.onPressedPowerButton();
+//        // Channel
+//        tvRemoteController.onPressedChannelDownButton();
+//        tvRemoteController.onDownChannelDownButton();
+//        tvRemoteController.onPressChannelUpButton();
+//        tvRemoteController.onUpChannelUpButton();
+//
+//        // Volume
+//        tvRemoteController.onPressedVolumeDownButton();
+//        tvRemoteController.onDownVolumeDownButton();
+//        tvRemoteController.onPressVolumeUpButton();
+//        tvRemoteController.onUpVolumeUpButton();
 
-        tvRemoteController.onPressedPowerButton();
-        tvRemoteController.onPressedChannelDownButton();
-        tvRemoteController.onDownChannelDownButton();
-        tvRemoteController.onPressChannelUpButton();
-        tvRemoteController.onUpChannelUpButton();
+        /*
+            과제 TempDownButton, TempUpButton, ACController 파일을 생성하고
+            정의하여
+            Main에 ACController 객체를 생성하고
 
-        // Volume
-        tvRemoteController.onPressedPowerButton();
-        tvRemoteController.onPressedVolumeDownButton();
-        tvRemoteController.onDownVolumeDownButton();
-        tvRemoteController.onPressVolumeUpButton();
-        tvRemoteController.onUpVolumeUpButton();
+            전원이 켜졌습니다
+
+            온도를 한 칸 내립니다
+            온도를 계속 내립니다
+
+            온도를 한 칸 올립니다
+            온도를 계속 올립니다
+
+            전원이 꺼졌습니다.
+         */
+
+        ACController acController = new ACController(
+                new PowerButton(), new TempDownButton(), new TempUpButton());
+
+        acController.onPressedPowerButton();
+        System.out.println();
+        acController.onPressTempDownButton();
+        acController.onDownTempDownButton();
+        System.out.println();
+        acController.onPressTempUpButton();
+        acController.onUpTempUpButton();
+        System.out.println();
+        acController.onPressedPowerButton();
     }
 }
