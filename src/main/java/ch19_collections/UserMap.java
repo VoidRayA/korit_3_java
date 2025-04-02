@@ -11,8 +11,5 @@ public class UserMap {
         userMap.put("password", "1234");
         userMap.put("email", "c@test.com");
         userMap.put("name", "김일");
-
-
-
     }
 }
